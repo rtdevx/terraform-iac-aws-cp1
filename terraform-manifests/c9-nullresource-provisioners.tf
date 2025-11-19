@@ -39,7 +39,7 @@ resource "null_resource" "myec2vm_bastion" {
     ]
   }
 
-*/ # Skipping Nullresource Provisioner for now.
+*/ #Skipping Nullresource Provisioner for now.
 
   /*
 
@@ -68,5 +68,5 @@ resource "null_resource" "myec2vm_bastion" {
   }  
 */
 
-}
+//}
 
