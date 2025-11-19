@@ -5,6 +5,8 @@
 # * https://developer.hashicorp.com/terraform/language/provisioners
 # @critical: Terraform Provisioners are the last resort, use only if other methods (user_data / AWS CodeArtifact) are not available.
 
+/* # Skipping Nullresource Provisioner for now.
+
 # INFO: Create a Null Resource and Provisioners
 resource "null_resource" "myec2vm_bastion" {
   depends_on = [aws_instance.myec2vm_bastion]
@@ -36,6 +38,8 @@ resource "null_resource" "myec2vm_bastion" {
       "sudo chmod 400 /tmp/terraform-key.pem"
     ]
   }
+
+*/ # Skipping Nullresource Provisioner for now.
 
   /*
 
