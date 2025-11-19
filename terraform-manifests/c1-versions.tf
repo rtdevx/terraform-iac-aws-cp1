@@ -22,4 +22,4 @@ terraform {
 provider "aws" {
   region  = var.aws_region
   //profile = "default" # NOTE: AWS Credentials Profile (profile = "default") configured on your local desktop terminal ($HOME/.aws/credentials)
-}
+} 
