@@ -27,7 +27,7 @@ resource "aws_lb" "application_load_balancer" {
 # * Only HTTP ports. SSL Termination at LB level. Out of scope for Terraform.
 
 resource "aws_lb_target_group" "private_target_group_80_app1" {
-  name        = "private-lb-tg-80-app1"
+  name        = "private-lb-tg-80-app1-${var.environment}"
   target_type = "instance"
   port        = 80
   protocol    = "HTTP"
