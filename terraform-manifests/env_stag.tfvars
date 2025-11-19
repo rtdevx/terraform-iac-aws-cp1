@@ -14,5 +14,4 @@ instance_keypair      = "terraform-key"
 //private_instance_count = 2 # NOTE: Probably not needed as ASG will manage this.
 
 # INFO: DNS Name
-//dns_name = "demo-${var.environment}.${data.aws_route53_zone.hosted_zone.name}"
 dns_name = "stag.aws.skynetx.uk"

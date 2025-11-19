@@ -21,5 +21,6 @@ terraform {
 # INFO: Provider Block
 provider "aws" {
   region  = var.aws_region
+  # NOTE: Profile only required when running Terraform locally on your desktop/laptop. CodePipeline will use Parameters defined in the Parameter Store.
   //profile = "default" # NOTE: AWS Credentials Profile (profile = "default") configured on your local desktop terminal ($HOME/.aws/credentials)
 } 
