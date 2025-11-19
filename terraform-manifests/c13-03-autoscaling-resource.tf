@@ -8,9 +8,9 @@ resource "aws_autoscaling_group" "my_asg" {
   depends_on = [module.vpc, aws_lb.application_load_balancer]
 
   name_prefix               = "${local.name}-"
-  desired_capacity          = 1
-  max_size                  = 2
-  min_size                  = 1
+  desired_capacity          = var.environment == "prod" ? 4 : 1 # NOTE: X for prod, Y for everything else
+  max_size                  = var.environment == "prod" ? 10 : 2 # NOTE: X for prod, Y for everything else
+  min_size                  = var.environment == "prod" ? 2 : 1 # NOTE: X for prod, Y for everything else
   health_check_grace_period = 300
   health_check_type         = "EC2" # ? "EC2" or "ELB". Controls how health checking is done. Difference between EC2 and ELB?
   vpc_zone_identifier       = module.vpc.private_subnets
