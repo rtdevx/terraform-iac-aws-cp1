@@ -3,26 +3,30 @@ title: Terraform IaC DevOps using AWS CodePipeline
 description: Create AWS CodePipeline with Multiple Environments Dev and Staging
 ---
 
-# ARCHITECTURE
+# Architecture
 
 ![Infrastructure](./assets/infrastructure.png "")
 ![Dev Infrastructure](./assets/infrastructure_dev.png "")
 ![Stag Infrastructure](./assets/infrastructure_stag.png "")
 
-# CONFIGURATION / USE
+# Configuration / Use
 
-## CONFIG FILES
+- DNS
 
-## DEPENDENCIES
+## Dependencies
 
-## MANUAL STEPS
+## Manual steps
 
 - AWS Keys in Parameter store
+- CloudWatch Log Groups
+- Manual Approval Stage
 
-# BUILDING NEW REGION:
+## Pipeline configuration files
 
-- Build region-specific codebuild
-- Add region-specific codepipeline
+### Building new region
+
+- Configure region-specific codebuild
+- Configure region-specific codepipeline
 
 # TODO
 
