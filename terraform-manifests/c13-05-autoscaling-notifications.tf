@@ -4,7 +4,7 @@
 # ? https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic
 
 resource "aws_sns_topic" "myasg_sns_topic" {
-  name = "myasg-sns-topic"
+  name = "${local.name}-myasg-sns-topic"
 }
 
 # INFO: SNS - Subscription
