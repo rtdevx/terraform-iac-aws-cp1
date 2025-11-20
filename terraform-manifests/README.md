@@ -161,7 +161,7 @@ This series draws heavily from **Kalyan Reddy Daida**’s [Terraform on AWS with
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | Region in which AWS Resources will be created | `string` | `"eu-west-2"` | no |
-| <a name="input_business_divsion"></a> [business\_divsion](#input\_business\_divsion) | Business Division in the large organization this Infrastructure belongs | `string` | `"Operations"` | no |
+| <a name="input_business_division"></a> [business\_divsion](#input\_business\_divsion) | Business Division in the large organization this Infrastructure belongs | `string` | `"Operations"` | no |
 | <a name="input_dns_name"></a> [dns\_name](#input\_dns\_name) | DNS Name to support multiple environments | `string` | n/a | yes |
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment Variable used as a prefix | `string` | `"DEV"` | no |
 | <a name="input_instance_count_private_app1"></a> [instance\_count\_private\_app1](#input\_instance\_count\_private\_app1) | AWS EC2 Private Instances Count - APP1 | `number` | `1` | no |

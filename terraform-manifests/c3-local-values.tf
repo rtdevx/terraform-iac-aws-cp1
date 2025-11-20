@@ -4,9 +4,9 @@
 
 data "aws_availability_zones" "available" {}
 locals {
-  owners      = var.business_divsion
+  owners      = var.business_division
   environment = var.environment
-  name        = "${var.business_divsion}-${var.environment}"
+  name        = "${var.business_division}-${var.environment}"
   #name        = "${local.owners}-${local.environment}"
 
   azs = slice(data.aws_availability_zones.available.names, 0, 2)
