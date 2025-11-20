@@ -1,2 +1,68 @@
-# Purpose of this Repository
+---
+title: Terraform IaC DevOps using AWS CodePipeline
+description: Create AWS CodePipeline with Multiple Environments Dev and Staging
+---
 
+# ARCHITECTURE
+
+![Infrastructure](./assets/infrastructure.png "")
+![Dev Infrastructure](./assets/infrastructure_dev.png "")
+![Stag Infrastructure](./assets/infrastructure_stag.png "")
+
+# CONFIGURATION / USE
+
+## CONFIG FILES
+
+## DEPENDENCIES
+
+## MANUAL STEPS
+
+- AWS Keys in Parameter store
+
+# BUILDING NEW REGION:
+
+- Build region-specific codebuild
+- Add region-specific codepipeline
+
+# TODO
+
+- .gitignore to ignore manual runs a1-codepipeline.
+- storing and distributing EC2 private key
+- Load Balancer connections policy
+- Modularize the environment for codebuild
+- No dependencies on external resources (i.e. S3 resource for the backend, backend MUST exist)
+- 1 pipeline using stages and 2 codebuilds to separate environments
+- name mismatch in backend
+
+# Disclaimer
+
+This series draws heavily from **Kalyan Reddy Daida**’s [Terraform on AWS with SRE & IaC DevOps](https://www.udemy.com/course/terraform-on-aws-with-sre-iac-devops-real-world-demos/) course on Udemy.
+
+[His content](https://www.udemy.com/user/kalyan-reddy-9/) was a game-changer in helping me understand Terraform.
+
+<!-- About the instructor -->
+
+<table>
+  <thead>
+      <tr>
+          <th>About the instructor</th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>🌐 <a href="https://stacksimplify.com/" target="_blank" rel="noreferrer">Website</a>
+</td>
+          <td>📺 <a href="http://www.youtube.com/stacksimplify" target="_blank" rel="noreferrer">YouTube</a>
+</td>
+      </tr>
+      <tr>
+          <td>💼 <a href="http://www.linkedin.com/in/kalyan-reddy-daida" target="_blank" rel="noreferrer">LinkedIn</a>
+</td>
+          <td>🗃️ <a href="https://github.com/stacksimplify" target="_blank" rel="noreferrer">GitHub</a>
+</td>
+      </tr>
+  </tbody>
+</table>
+
+<!-- /About the instructor -->
