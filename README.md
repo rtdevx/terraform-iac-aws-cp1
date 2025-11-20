@@ -3,6 +3,38 @@ title: Terraform IaC DevOps using AWS CodePipeline
 description: Create AWS CodePipeline with Multiple Environments Dev and Staging
 ---
 
+# Introduction
+
+1. Infrastructure is defined in Terraform code and is being run from GitHub using AWS CodePipeline.
+2. Infrastructure
+
+- VPC (Multi-AZ)
+- IAM
+- Security Groups
+    - Bastion Host
+    - Private
+    - Load Balancer
+- EC2 Instances
+    - Single EC2 Instance for Bastion Host
+    - Other instances managed with AutoScaling Group and Launch Template
+- Application Load Balancer
+    - Fixed response
+    - Host-based routing based on path pattern
+    - HTTPS redirection
+- ACM TLS Certificate
+- Route53 DNS Registration
+- AutoScaling
+    - Target Tracking (AVG CPU Load, AVG LB Connections to single target)
+    - Scheduled
+- Backend for Remote State Storage
+- DynamoDB State Lock - Optional - Not required as only single instance of pipeline can run at a given time
+
+3. Multiple environments managed by their respective configuration files.
+
+- AWS CodeBuild
+- AWS CodePipeline
+- Github
+
 # Architecture
 
 ![Infrastructure](./assets/infrastructure.png "")
