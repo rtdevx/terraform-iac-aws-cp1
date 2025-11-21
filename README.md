@@ -126,7 +126,7 @@ Check `dns_name` in `env_\*.tfvars` file, copy the URi and test the application.
 
 - Load Balancer connections policy throws an error when running first time
 
-"aws_autoscaling_policy" "alb_target_requests_greater_than_yy" in `c13-06-autoscaling-ttsp.tf` needs to be corrected (wait?). It is throwing routing errors when deployed first time. It is ok on the second run.
+`"aws_autoscaling_policy" "alb_target_requests_greater_than_yy"` in `c13-06-autoscaling-ttsp.tf` needs to be corrected (wait?). It is throwing routing errors when deployed first time. It is ok on the second run.
 
 - Modularize the environment for codebuild
 - Manual Approval Stage
