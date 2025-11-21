@@ -83,6 +83,26 @@ Systems Manager > Application Tools > Parameter Store
 
 ![AWS Parameter Store](./assets/AWS_Parameter_Store.png "")
 
+```
+Name: /CodeBuild/MY_AWS_ACCESS_KEY_ID
+Descritpion: My AWS Access Key ID for Terraform CodePipeline Project
+Tier: Standard
+Type: Secure String
+Rest all defaults
+Value: VALUE_OF_MY_AWS_ACCESS_KEY_ID (Generated below, IAM)
+```
+
+```
+Name: /CodeBuild/MY_AWS_SECRET_ACCESS_KEY
+Descritpion: My AWS Secret Access Key for Terraform CodePipeline Project
+Tier: Standard
+Type: Secure String
+Rest all defaults
+Value: VALUE_OF_MY_AWS_SECRET_ACCESS_KEY (Generated below, IAM)
+```
+
+_AWS Parameter Store:_ https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html
+
 ### CloudWatch Log Groups
 
 During the Pipeline execution, **Log Groups** are created in **CloudWatch**. Those logs will be kept forever if not deleted. Retention settings can be adjusted.
