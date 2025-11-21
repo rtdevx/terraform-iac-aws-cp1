@@ -51,6 +51,34 @@ description: Create AWS CodePipeline with Multiple Environments Dev and Staging
 | `region`          | env_\*.conf   |                             |
 | `AWS_ACCESS_KEY_ID`<br>`AWS_SECRET_ACCESS_KEY`          | buildspec-\*.conf   | AWS Access Keys for GitHub and AWS CodePipeline                            |
 
+#### 1. Deploy `aws-codepipelines`
+
+```
+cd terraform-core\aws-codepipelines
+terraform init
+terraform plan
+terraform apply
+```
+
+#### 2. Modify config files accordingly
+
+Buildspec can apply or destroy the environment.
+
+Set the `TF_COMMAND` in `terraform-iac-aws-cp1\terraform\manifests\buildspec-ENV.yml`.
+
+#### 3. Deploy the infrastructure
+
+In AWS Console:
+
+- Check for pipelines being created and follow the logs to ensure no errors and infrastructure has been deployed.
+
+```
+Developer Tools > CodePipeline > Pipelines
+```
+
+#### 4. Test the application
+
+Check `dns_name` in `env_\*.tfvars` file, copy the URi and test the application.
 
 ## Dependencies
 
@@ -125,20 +153,6 @@ Log Group names are defined in `terraform-core\aws-codepipelines` repository as 
     - `buildspeck-NEWENVIRONMENT.yml`
 - Configure region-specific codebuild (`terraform-core\aws-codepipelines`)
 - Configure region-specific codepipeline (`terraform-core\aws-codepipelines`)
-
-# Testing
-
-Once `terraform-core\aws-codepipelines` is deployed with terraform:
-
-```
-cd terraform-core/aws-codepipelines/
-terraform init
-terraform plan
-terraform apply
-```
-> *Verify `TF_COMMAND` variable in `buildspeck-ENVIRONMENT.yml` to ensure you are **applying** or **destroying** terraform configuration.
-
-Check `dns_name` in `env_\*.tfvars` file, copy the URi and test the application.
 
 # TODO
 
