@@ -49,6 +49,8 @@ description: Create AWS CodePipeline with Multiple Environments Dev and Staging
 | `environment`     | env_\*.tfvars |                             |
 | `bucket`<br>`key` | env_\*.conf   | Backend config for .tfstate |
 | `region`          | env_\*.conf   |                             |
+| `AWS_ACCESS_KEY_ID`<br>`AWS_SECRET_ACCESS_KEY`          | buildspec-\*.conf   | AWS Access Keys for GitHub and AWS CodePipeline                            |
+
 
 ## Dependencies
 
