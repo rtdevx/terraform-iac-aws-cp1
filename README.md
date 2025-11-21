@@ -26,6 +26,7 @@ description: Create AWS CodePipeline with Multiple Environments Dev and Staging
 - AutoScaling
     - Target Tracking (AVG CPU Load, AVG LB Connections to single target)
     - Scheduled
+    - SNS Email Notification will be sent out for any autoscaling events
 - Backend for Remote State Storage
 - DynamoDB State Lock - Optional - Not required as only single instance of pipeline can run at a given time
 
