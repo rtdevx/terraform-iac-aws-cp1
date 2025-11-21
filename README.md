@@ -59,15 +59,6 @@ terraform init
 terraform plan
 terraform apply
 ```
-
-#### 2. Modify config files accordingly
-
-Buildspec can apply or destroy the environment.
-
-Set the `TF_COMMAND` in `terraform-iac-aws-cp1\terraform\manifests\buildspec-ENV.yml`.
-
-#### 3. Deploy the infrastructure
-
 In AWS Console:
 
 - Check for pipelines being created and follow the logs to ensure no errors and infrastructure has been deployed.
@@ -76,7 +67,15 @@ In AWS Console:
 Developer Tools > CodePipeline > Pipelines
 ```
 
-#### 4. Test the application
+#### 2. Modify config files
+
+After above step has completed, infrastructure is now being managed via GitHub.
+
+Buildspec can apply or destroy the environment.
+
+Set the `TF_COMMAND` in `terraform-iac-aws-cp1\terraform\manifests\buildspec-ENV.yml` accordingly.
+
+#### 3. Test the application
 
 Check `dns_name` in `env_\*.tfvars` file, copy the URi and test the application.
 
