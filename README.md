@@ -79,6 +79,18 @@ Set the `TF_COMMAND` in `terraform-iac-aws-cp1\terraform\manifests\buildspec-ENV
 
 Check `dns_name` in `env_\*.tfvars` file, copy the URi and test the application.
 
+#### 4. Cleanup
+
+**After** the infrastructure have been **destroyed**:
+
+- folder that keeps terraform state files can be deleted (check `key` variable in `terraform-manifests\env_*.conf`)
+
+- Log Groups can be deleted (names are defined in `terraform-core\aws-codepipelines`)
+
+```
+CloudWatch > Logs > Log Groups
+```
+
 ## Dependencies
 
 | Repository        | Terraform           | Comment                     |
