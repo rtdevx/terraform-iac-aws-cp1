@@ -1,0 +1,32 @@
+# INFO: Generate Terraform modules documentation in various formats
+# ? https://terraform-docs.io/
+# ? https://github.com/terraform-docs/terraform-docs/
+
+name: Generate terraform docs
+on:
+  pull_request:
+  #push:
+    #branches:
+    #  - main
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        #dir: ["module-a", "module-b", "modules/module-c"]
+        dir: [
+          "terraform-manifests"          
+          ]
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Render terraform docs for directory
+        uses: terraform-docs/gh-actions@main
+        with:
+          working-dir: ${{ matrix.dir }}
+          output-file: README.md
+          output-method: inject
+          git-push: "true"
