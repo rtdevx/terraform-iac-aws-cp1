@@ -136,7 +136,7 @@ terraform init
 terraform plan
 terraform apply
 ```
-> *Verify `TF_COMMAND` variable in `buildspeck-ENVIRONMENT.yml` to ensure you are applying or destroying terraform configuration.
+> *Verify `TF_COMMAND` variable in `buildspeck-ENVIRONMENT.yml` to ensure you are **applying** or **destroying** terraform configuration.
 
 Check `dns_name` in `env_\*.tfvars` file, copy the URi and test the application.
 
